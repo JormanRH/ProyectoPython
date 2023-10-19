@@ -133,9 +133,9 @@
             include './FooterForm.html';
         ?>
 
-        <script src="../js/jquery.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
-        <script src="../js/scripts.js"></script>
+        <script src="../JS/jquery.min.js"></script>
+        <script src="../JS/bootstrap.min.js"></script>
+        <script src="../JS/scripts.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     </body>
