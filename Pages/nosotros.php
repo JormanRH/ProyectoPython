@@ -78,7 +78,7 @@
 
     <footer class="footerAboutUs">       
         <?php
-        include './FooterStore.html';
+        include './FooterUs.html';
         ?>
     </footer>
 </body>
