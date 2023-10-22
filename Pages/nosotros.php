@@ -56,19 +56,19 @@
             <h2 class="animated">Comentarios de Nuestros Clientes</h2>
             <div class="customer-container">
                 <div class="customer">
-                    <img src="/Img/clientes/cliente1.jpeg" alt="Cliente 1">
+                    <img src="../Img/clientes/cliente1.jpeg" alt="Cliente 1">
                     <p>"¡Excelente calidad de productos! SPARTA ha mejorado mi experiencia en el deporte."</p>
                 </div>
                 <div class="customer">
-                    <img src="/Img/clientes/cliente2.jpeg" alt="Cliente 2">
+                    <img src="../Img/clientes/cliente2.jpeg" alt="Cliente 2">
                     <p>"Ropa deportiva cómoda y elegante. ¡Totalmente recomendado!"</p>
                 </div>
                 <div class="customer">
-                    <img src="/Img/clientes/cliente3.jpeg" alt="Cliente 3">
+                    <img src="../Img/clientes/cliente3.jpeg" alt="Cliente 3">
                     <p>"SPARTA es mi tienda de deportes de confianza. Productos de calidad y un servicio excepcional."</p>
                 </div>
                 <div class="customer">
-                    <img src="/Img/clientes/cliente4.jpeg" alt="Cliente 4">
+                    <img src="../Img/clientes/cliente4.jpeg" alt="Cliente 4">
                     <p>"He comprado varias veces en SPARTA y siempre quedo satisfecho. ¡Gracias!"</p>
                 </div>
             </div>
