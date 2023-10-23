@@ -17,6 +17,11 @@
             ?>
         </header>
         <h1>Productos Más Vendidos</h1>
+        <p id="pCambio">Tipo Cambio $ CR - Compra: <?php
+            echo obtenerPorGet(317);
+            ?> Venta:  <?php
+            echo obtenerPorGet(318);
+            ?> </p>
 
         <section class="product-grid">
             <div class="product" class="animated">
@@ -76,6 +81,29 @@
             include './FooterProducts.html';
             ?>
         </footer>
+        <?php
+        function obtenerPorGet($tipo) {
+            $CorreoElectronico = 'jormanrh1993@gmail.com';
+            $Token = '8M0O238P33';
+            $ind_econom_ws = "https://gee.bccr.fi.cr/Indicadores/Suscripciones/WS/wsindicadoreseconomicos.asmx/"; // URL del WebService
+            $ind_econom_func = "ObtenerIndicadoresEconomicosXML?"; // Funcion que se va a utilizar del WebService
+
+            date_default_timezone_set('America/Costa_Rica');
+            $hoy = date("d/m/Y");
+            $arrContextOptions = array(
+                "ssl" => array(
+                    "verify_peer" => false,
+                    "verify_peer_name" => false,
+                ),
+            );
+            $urlWS = $ind_econom_ws . $ind_econom_func . "Indicador=" . $tipo . "&FechaInicio=" . $hoy . "&FechaFinal=" . $hoy . "&Nombre=tq&SubNiveles=N&CorreoElectronico=" . $CorreoElectronico . "&Token=" . $Token;
+            $indWS = file_get_contents($urlWS, false, stream_context_create($arrContextOptions));
+            $xml = simplexml_load_string($indWS);
+            $tipo_cambio = trim(strip_tags(substr($xml, strpos($xml, "<NUM_VALOR>"), strripos($xml, "</NUM_VALOR>"))));
+            $tipoCambio = number_format($tipo_cambio, 2);
+            return $tipoCambio;
+        }//end method
+        ?>
 
     </body>
 </html>
