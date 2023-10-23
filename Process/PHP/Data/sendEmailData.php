@@ -36,13 +36,12 @@ class sendEmailData {
             //Recipients
             $mail->setFrom('sparta@mktechstore.com', 'SPARTA STORE');
             $mail->addAddress($email, $name . " " . $lastName); // Add a recipient
-            $mail->addBCC('jorman@grupomktech.com');
-
+            
             //Attachments
             $variable = $content;
-            $pathPDF = 'C:\xampp\htdocs\ProyectoPython\PDF\Catalogo.pdf';
+            $pathPDF = '../../../PDF/Catalogo.pdf';
             $fichero = file_get_contents($pathPDF);
-            $mail->AddStringAttachment($fichero, $pathPDF);
+            $mail->AddStringAttachment($fichero, 'SPARTA.pdf');
 
             //Content
             $mail->isHTML(true); // Set email format to HTML
