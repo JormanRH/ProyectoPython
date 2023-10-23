@@ -18,9 +18,9 @@
         </header>
         <h1>Productos Más Vendidos</h1>
         <p id="pCambio">Tipo Cambio $ CR - Compra: <?php
-            echo obtenerPorGet(317);
+            echo '₡'. obtenerPorGet(317);
             ?> Venta:  <?php
-            echo obtenerPorGet(318);
+            echo '₡'. obtenerPorGet(318);
             ?> </p>
 
         <section class="product-grid">
